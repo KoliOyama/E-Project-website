@@ -1,0 +1,105 @@
+@import "../../styles/variablels";
+
+.about {
+  &__hero-section {
+    padding: 106px 0;
+    position: relative;
+
+    & > div:first-child {
+      background-color: $primary-color;
+      color: $secondary-color;
+      width: 70%;
+      padding: 86px 272px 222px 133px;
+
+      h1 {
+        font-size: $text-9xl;
+        font-family: $primary-font;
+        margin-bottom: 72px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        p {
+          font-family: $secondary-font;
+          font-size: $text-base;
+        }
+      }
+    }
+
+    & > div:last-child {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__team-section {
+    padding: 124px;
+    display: flex;
+    gap: 76px;
+
+    & > div {
+      width: 50%;
+    }
+
+    h2 {
+      font-size: $text-8xl;
+      font-family: $primary-font;
+      color: $primary-color;
+      margin-bottom: $spacer-1;
+    }
+
+    p {
+      font-size: $text-lg;
+      font-family: $secondary-font;
+      color: $primary-color;
+    }
+  }
+  &__get-involved-section {
+    padding: 124px;
+    display: flex;
+    gap: 85px;
+
+    & > div {
+      width: 50%;
+    }
+
+    h2 {
+      font-size: $text-8xl;
+      font-family: $primary-font;
+      color: $primary-color;
+      margin-bottom: $spacer-1;
+    }
+
+    p {
+      font-size: $text-lg;
+      font-family: $secondary-font;
+      color: $primary-color;
+    }
+
+    button {
+      padding: 10px 16px;
+      border-radius: 20px;
+      border: 3px solid $primary-color;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background-color: transparent;
+      font-size: $text-lg;
+      font-weight: 600;
+      color: $primary-color;
+      font-family: $secondary-font;
+      margin-top: $spacer-4;
+    }
+  }
+}
