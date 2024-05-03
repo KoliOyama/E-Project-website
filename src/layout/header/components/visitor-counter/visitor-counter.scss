@@ -1,0 +1,9 @@
+@import "../../../../styles/variablels";
+
+.visitor-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: $text-lg;
+}
