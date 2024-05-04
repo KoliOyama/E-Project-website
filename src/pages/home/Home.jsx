@@ -180,11 +180,15 @@ const Home = () => {
               <h2 className="title">Hand-Lettering & Design</h2>
               <div className="learn__style-paragraph">
                 <p>
-                Hand-lettering and design involves crafting custom letterforms by hand, complemented by brush lettering's expressive strokes and digital calligraphy's precision. 
+                  Hand-lettering and design involves crafting custom letterforms
+                  by hand, complemented by brush lettering's expressive strokes
+                  and digital calligraphy's precision.
                 </p>
               </div>
               <p>
-              Brush lettering employs brush pens for fluid letters, while digital calligraphy merges traditional methods with digital tools, ideal for various design applications.
+                Brush lettering employs brush pens for fluid letters, while
+                digital calligraphy merges traditional methods with digital
+                tools, ideal for various design applications.
               </p>
             </div>
             <button>View more</button>
