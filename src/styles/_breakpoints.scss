@@ -1,0 +1,45 @@
+//768px 900px 1440px
+$breakpoints-up: (
+    'medium': 48em,
+    'large': 61.25em,
+    'large1': 80rem,
+    'xlarge': 90em,
+);
+
+@mixin breakpoint-up($size){
+    @media(min-width: map-get($breakpoints-up, $size)){
+        @content;
+    }
+}
+
+//767.98px 
+$breakpoints-down: (
+    'small': 47.99875em,
+    'medium': 61.23em,
+    'medium1': 79.98rem,
+    'large': 89.99875em,
+);
+
+@mixin breakpoint-down($size){
+    @media(max-width: map-get($breakpoints-down, $size)){
+        @content;
+    }
+}
+
+//visibility
+// @mixin breakpoint-mobile($size){
+//     @if $size == md{
+//         @media (max-width: 56.24875em){
+//             @content;
+//         }
+//     }
+
+// }
+
+// @mixin breakpoint-desktop($size){
+//     @if $size == xlarge{
+//         @media (min-width: 90em){
+//             @content;
+//         }
+//     }
+// }

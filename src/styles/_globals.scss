@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import './variablels';
 
 *,
 *::before,
@@ -23,6 +24,10 @@ picture {
     max-width: 100%;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
+
 a,
 a:visited,
 a:hover {
@@ -39,3 +44,53 @@ html {
     font-size: 100%;
 }
 
+:root{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    font-family: $secondary-font;
+    color: $primary-color;
+    font-weight: $fw-medium;
+
+}
+
+//helper classes
+.max-w-75 {
+    max-width: 75rem;
+}
+
+.py-8 {
+    padding-block-start: 5rem;
+    padding-block-end: 5rem;
+}
+
+.px-large{
+    padding-inline: 7.75rem;
+}
+
+.paragraph{
+    line-height: $spacer-2;
+}
+
+.paragraph2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $spacer-3;
+}
+
+.caption{
+    font-size: $text-xl;
+    font-weight: 600;
+}
+
+.title{
+    font-size: $text-8xl;
+    font-family: $primary-font;
+    font-weight: $fw-medium;
+
+}

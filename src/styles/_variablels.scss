@@ -2,6 +2,15 @@
 $primary-font: "DM Serif Text", serif;
 $secondary-font: "Work Sans", sans-serif;
 
+//font weights
+$fw-thin: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$fw-black: 900;
+
 // Font sizes in rem based on Tailwind CSS naming convention
 $text-sm: 0.75rem;   // 12px
 $text-base: 1rem;    // 16px
@@ -17,6 +26,7 @@ $text-8xl: 3.5rem;   // 56px
 $text-9xl: 4rem;     // 64px
 $text-10xl: 4.5rem;  // 72px
 
+
 //colors
 $primary-color: hsl(356, 41%, 14%);
 $secondary-color: hsl(43, 30%, 88%);
@@ -28,7 +38,19 @@ $spacer-1: 0.75rem;   // 16px
 $spacer-2: 1.5rem;   // 24px
 $spacer-3: 2rem;   // 32px
 $spacer-4: 2.5rem;   // 40px
+$spacer-5: 5rem;   // 80px
 
+//border radius
+$border-radius: 1.25rem;
+
+//util 
+$height-full: 100%;
+$height-vh: 100vh;
+$width-full: 100%;
+
+$site-max-width: 1500px; /* Maximum width of the site */
+$site-gutter: 4vw; /* Gutter width */
+$inset-padding: 20px; /* Inset padding */
 
 
 
