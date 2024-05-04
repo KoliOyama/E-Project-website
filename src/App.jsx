@@ -5,6 +5,7 @@ import About from "./pages/about/About";
 import Gallery from "./pages/gallery/Gallery";
 import Contact from "./pages/contact/Contact";
 import Header from "./layout/header/Header";
+import Footer from "./layout/footer/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

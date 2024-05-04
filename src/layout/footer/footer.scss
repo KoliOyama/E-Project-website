@@ -1,0 +1,78 @@
+@import "../../styles/variablels";
+
+.footer {
+  padding: 106px 133px;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  color: $secondary-color;
+
+  & > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-family: $brand-font;
+    font-size: $text-8xl;
+    // margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: $text-lg;
+    font-family: $secondary-font;
+  }
+
+  &__subscribe {
+    display: flex;
+    border-bottom: 1px solid $secondary-color;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    gap: 4rem;
+    // margin-top: 2rem;
+
+    input {
+      background-color: transparent;
+      border: none;
+      color: $secondary-color;
+
+      &::placeholder {
+        color: #646363;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: $secondary-color;
+      font-family: $secondary-font;
+      cursor: pointer;
+    }
+  }
+
+  &__copyright {
+    display: block;
+    // margin-top: 78px;
+    font-family: $secondary-font;
+    font-size: $text-lg;
+  }
+
+  &__links {
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: $secondary-font;
+    font-size: $text-xl;
+
+    li:first-child {
+      font-size: $text-2xl;
+      font-weight: 600;
+    }
+  }
+}

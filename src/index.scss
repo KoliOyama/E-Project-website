@@ -1,7 +1,9 @@
-@import './styles/globals';
-@import './styles/variablels';
+@import "./styles/globals";
+@import "./styles/variablels";
 
 .app {
   overflow-x: hidden;
+  min-height: 100vh;
+
   background-color: $secondary-color;
 }
