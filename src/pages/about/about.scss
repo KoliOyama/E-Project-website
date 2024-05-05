@@ -1,4 +1,5 @@
 @import "../../styles/variablels";
+@import "../../styles/breakpoints";
 
 .about {
   &__hero-section {
@@ -15,6 +16,11 @@
         font-size: $text-9xl;
         font-family: $primary-font;
         margin-bottom: 72px;
+
+        @include breakpoint-down(small) {
+          font-size: $text-4xl;
+          margin-bottom: $spacer-1;
+        }
       }
 
       div {
@@ -26,6 +32,14 @@
           font-family: $secondary-font;
           font-size: $text-base;
         }
+      }
+
+      @include breakpoint-down(medium) {
+        padding: $spacer-5 25% $spacer-5 $spacer-3;
+        width: 70%;
+      }
+      @include breakpoint-down(small) {
+        width: 100%;
       }
     }
 
@@ -40,6 +54,18 @@
         height: 100%;
         object-fit: cover;
       }
+
+      @include breakpoint-down(medium) {
+        right: $spacer-2;
+        width: 50%;
+      }
+      @include breakpoint-down(small) {
+        display: none;
+      }
+    }
+
+    @include breakpoint-down(small) {
+      padding: 78px 24px 78px 0;
     }
   }
 
@@ -50,6 +76,10 @@
 
     & > div {
       width: 50%;
+
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
     }
 
     h2 {
@@ -57,12 +87,26 @@
       font-family: $primary-font;
       color: $primary-color;
       margin-bottom: $spacer-1;
+
+      @include breakpoint-down(small) {
+        font-size: $text-4xl;
+      }
     }
 
     p {
-      font-size: $text-lg;
+      font-size: $text-base;
       font-family: $secondary-font;
       color: $primary-color;
+    }
+
+    @include breakpoint-down(medium) {
+      padding: $spacer-3;
+    }
+
+    @include breakpoint-down(small) {
+      padding: $spacer-2;
+      flex-direction: column;
+      gap: $spacer-1;
     }
   }
   &__get-involved-section {
@@ -72,6 +116,10 @@
 
     & > div {
       width: 50%;
+
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
     }
 
     h2 {
@@ -79,10 +127,14 @@
       font-family: $primary-font;
       color: $primary-color;
       margin-bottom: $spacer-1;
+
+      @include breakpoint-down(small) {
+        font-size: $text-4xl;
+      }
     }
 
     p {
-      font-size: $text-lg;
+      font-size: $text-base;
       font-family: $secondary-font;
       color: $primary-color;
     }
@@ -100,6 +152,20 @@
       color: $primary-color;
       font-family: $secondary-font;
       margin-top: $spacer-4;
+
+      @include breakpoint-down(small) {
+        font-size: $text-base;
+      }
+    }
+
+    @include breakpoint-down(medium) {
+      padding: $spacer-3 $spacer-3 $spacer-5;
+    }
+
+    @include breakpoint-down(small) {
+      padding: $spacer-2 $spacer-2 $spacer-5;
+      flex-direction: column-reverse;
+      gap: $spacer-1;
     }
   }
 }
