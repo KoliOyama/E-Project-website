@@ -6,10 +6,12 @@ import Gallery from "./pages/gallery/Gallery";
 import Contact from "./pages/contact/Contact";
 import Header from "./layout/header/Header";
 import Footer from "./layout/footer/Footer";
+import GeoLocation from "./feature/geo-location/GeoLocation";
 
 function App() {
   return (
     <div className="app">
+      <GeoLocation />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
