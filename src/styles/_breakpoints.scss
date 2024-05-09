@@ -1,9 +1,10 @@
-//768px 900px 1440px
+//640px 768px 1024px 1280px 1536px
 $breakpoints-up: (
-    'medium': 48em,
-    'large': 61.25em,
-    'large1': 80rem,
-    'xlarge': 90em,
+    'sm': 40em, //640px
+    'md': 48em, //768px
+    'lg': 64em, //1024px
+    'xl': 80em, //1280px
+    '2xl': 96em, //1536px
 );
 
 @mixin breakpoint-up($size){
@@ -12,12 +13,14 @@ $breakpoints-up: (
     }
 }
 
-//767.98px 
+//639.98px 767.98px 1023.98px 1279.98px 1535.98px
 $breakpoints-down: (
-    'small': 47.99875em,
-    'medium': 61.23em,
-    'medium1': 79.98rem,
-    'large': 89.99875em,
+    'xxs': 35.62375em, //569.98px
+    'xs': 39.99875em, //639.98px
+    'sm': 47.99875em, //767.98px
+    'md': 63.99875em, //1023.98px 
+    'lg': 79.98rem, // 1279.98px
+    'xl': 95.99875em, //1535.98
 );
 
 @mixin breakpoint-down($size){
@@ -25,21 +28,3 @@ $breakpoints-down: (
         @content;
     }
 }
-
-//visibility
-// @mixin breakpoint-mobile($size){
-//     @if $size == md{
-//         @media (max-width: 56.24875em){
-//             @content;
-//         }
-//     }
-
-// }
-
-// @mixin breakpoint-desktop($size){
-//     @if $size == xlarge{
-//         @media (min-width: 90em){
-//             @content;
-//         }
-//     }
-// }

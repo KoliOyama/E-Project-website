@@ -3,55 +3,54 @@ import "./home.scss";
 
 //images
 import Heroimg from "../../assets/hero-image.jpg";
-import About from "../../assets/about-us-img.png";
+import Aboutimg from "../../assets/about-us-img.png";
 import Trad from "../../assets/trad-calligraphy-img.jpg";
 import Modern1 from "../../assets/modern-cal-img1.jpg";
-import Modern2 from "../../assets/modern-cal-img2.jpg";
-import Modern3 from "../../assets/modern calligraphy3.jpg";
 import Hand from "../../assets/hand-lettering.jpg";
 import Gcard1 from "../../assets/chinese calligraphy1.jpg";
 import Gcard2 from "../../assets/samir-bouaked-MFvflDBZdyM-unsplash.jpg";
 import Gcard3 from "../../assets/arabic-calligraphy.jpg";
+import Contactimg from "../../assets/contact-section-img.jpg";
 
 //icons
-import { HiOutlineMail } from "react-icons/hi";
-import { CiLocationOn } from "react-icons/ci";
-import { HiOutlinePhone } from "react-icons/hi2";
+import { MdOutlineEmail } from "react-icons/md";
+import { IoLocationOutline } from "react-icons/io5";
+import { IoCallOutline } from "react-icons/io5";
+import { FaArrowRight } from "react-icons/fa6";
 
 const Home = () => {
   return (
     <div className="home">
       {/*******Hero section*******/}
-      <section className="home__hero-section px-large">
-        <div className="home__top">
-          <div className="home__hero-display">
-            <h1>
-              Discover, Learn, <br />
-              and Explore <br />
-              Calligraphy
-            </h1>
-          </div>
-          <div className="hero__img-wrapper">
-            <div className="home__img-container">
-              <img className="hero__img" src={Heroimg} alt="" />
+      <section className="home__hero-section container">
+        <div className="hero-content">
+          <div className="hero-top">
+            <div className="hero-display">
+              <h1>Discover, Learn, and Explore Calligraphy</h1>
+            </div>
+            <div className="hero-img-wrapper">
+              <div className="hero-img-container">
+                <img className="hero-img" src={Heroimg} alt="" />
+              </div>
             </div>
           </div>
+
+          <div className="hero-paragraphs">
+            <p>
+              The word calligraphy comes from the Greek Kallos and Graaphien,
+              meaning beautiful and writing. However, before calligraphy became
+              known as an art form, it was just considered writing;
+            </p>
+            <p>
+              The very first known record of writing dates around 3500 years BC
+              in Mesopotamia present-day Iraq. This is known as the Cuneiform
+              script, which mainly consisted of making marks on wet clay
+              tablets. 
+            </p>
+          </div>
         </div>
 
-        <div className="home__paragraphs">
-          <p>
-            The word calligraphy comes from the Greek Kallos and Graaphien,
-            meaning beautiful and writing. However, before calligraphy became
-            known as an art form, it was just considered writing;
-          </p>
-          <p>
-            The very first known record of writing dates around 3500 years BC in
-            Mesopotamia present-day Iraq. This is known as the Cuneiform script,
-            which mainly consisted of making marks on wet clay tablets. 
-          </p>
-        </div>
-
-        <button class="hero__scroll">
+        <button class="hero-scroll">
           <svg
             class="w-6 h-6 text-gray-800 dark:text-white chevron"
             aria-hidden="true"
@@ -71,46 +70,41 @@ const Home = () => {
       </section>
 
       {/*******About section*******/}
-      <section className="about py-8">
-        <div className="about__img-container">
-          <img className="about__img" src={About} alt="" />
+      <section className="home__about-section">
+        <div className="about-img-container">
+          <img className="about-img" src={Aboutimg} alt="" />
         </div>
 
-        <div className="about__info-wrapper">
-          <div className="about__info">
-            <div className="about__heading">
-              <h3 className="about__caption caption">About us</h3>
-              <h1 className="about__title">Get to know us</h1>
+        <div className="about-info-wrapper ">
+          <div className="about-info">
+            <div className="about-heading">
+              <h3 className="about-caption caption">About us</h3>
+              <h1 className="about-title title">Get to know us</h1>
             </div>
 
-            <div className="about__body paragraph2">
-              <p className="about__paragraph paragraph">
+            <div className="about-body paragraph2">
+              <p className="about-paragraph paragraph">
                 At Scratchy Nib, we’re passionate about the art of writing.
                 Whether you’re a seasoned calligrapher or just dipping your pen
                 into the inkwell, we’re here to inspire and empower you on your
-                creative journey
-              </p>
-              <p className="about__paragraph paragraph">
-                Scratchy Nib was born out of a love for handwritten expression.
-                We believe that every stroke of the nib carries a piece of your
-                soul, and every ink spill tells a story. Our mission is to
-                celebrate the imperfect beauty of handwritten words—the smudges,
-                the quirks, and the unexpected flourishes.
+                creative journey.
               </p>
             </div>
-            <button>Learn more</button>
+            <button className="btn-light">
+              Learn more <FaArrowRight />
+            </button>
           </div>
         </div>
       </section>
 
       {/*******Learn section*******/}
-      <section className="learn px-large">
-        <div className="learn__copy">
-          <div className="heading">
+      <section className="home__learn-section container section-py">
+        <div className="learn-copy">
+          <div className="learn-heading">
             <h3 className="caption">Learn</h3>
             <h1 className="title">Forms and styles of Calligraphy</h1>
           </div>
-          <p className="body">
+          <p className="body paragraph">
             Explore various ways of writing beautifully. Delve into the timeless
             allure of traditional scripts, the creative freedom of modern
             styles, and the expressive beauty of hand-lettering and design.
@@ -118,15 +112,15 @@ const Home = () => {
         </div>
 
         {/*traditional calligraphy*/}
-        <section className="learn__item trad-calligraphy">
+        <div className="learn-item trad-calligraphy">
           <div className="learn-img-container">
             <img className="learn-img" src={Trad} alt="" />
           </div>
 
-          <div className="learn__description">
-            <div className="learn__style-copy">
+          <div className="learn-description">
+            <div className="learn-style-copy">
               <h2 className="title">Traditional Calligraphy</h2>
-              <div className="learn__style-paragraph">
+              <div className="learn-style-paragraph">
                 <p>
                   Traditional calligraphy is a timeless art form that transcends
                   mere writing; it's a delicate dance of ink on paper, embodying
@@ -135,50 +129,57 @@ const Home = () => {
                   calligraphy encompasses a myriad of styles, each with its own
                   unique flair and elegance.
                 </p>
+                <p>
+                  Subcategories of traditional calligraphy include - Arabic,
+                  Indic, Greek, Chineese, Japanese calligraphy, and many others
+                </p>
               </div>
-              <p>
-                Subcategories of traditional calligraphy include - Arabic,
-                Indic, Greek, Chineese, Japanese calligraphy, and many others
-              </p>
             </div>
-            <button>View more</button>
+            <button className="btn-dark">
+              View more <FaArrowRight />
+            </button>
           </div>
-        </section>
+        </div>
 
         {/*modern calligraphy*/}
-        <section className="learn__item modern-calligraphy">
-          <div className="learn__img-container">
-            <img className="learn__img" src={Modern1} alt="" />
+        <div className="learn-item modern-calligraphy">
+          <div className="learn-img-container">
+            <img className="learn-img" src={Modern1} alt="" />
           </div>
 
-          <div className="learn__description modern-description">
-            <div className="learn__style-copy">
-              <div className="learn__style-copy-wrapper">
-                <h2 className="title">Modern Calligraphy</h2>
-                <div className="learn__style-paragraph">
-                  <p>
-                    Modern calligraphy offers fresh perspectives on the age-old
-                    art, blending tradition with innovation. Drawing from
-                    classical techniques, modern calligraphers explore new
-                    avenues through experimentation.
-                  </p>
-                </div>
-              </div>
-              <div className="learn__extra-imgs">
-                <img src={Modern2} alt="" />
-                <img src={Modern3} alt="" />
+          <div className="learn-description modern-description">
+            <div className="modern-style-wrapper">
+              <h2 className="title">Modern Calligraphy</h2>
+              <div className="learn-style-paragraph">
+                <p>
+                  Modern calligraphy offers fresh perspectives on the age-old
+                  art, blending tradition with innovation. Drawing from
+                  classical techniques, modern calligraphers explore new avenues
+                  through experimentation.
+                </p>
+                <p>
+                  In the realm of modern calligraphy, boundaries are meant to be
+                  pushed, conventions challenged, and creativity unleashed. As
+                  practitioners experiment with new tools, techniques, and
+                  mediums, modern calligraphy becomes a playground for
+                  innovation and self-expression.
+                </p>
               </div>
             </div>
-            <button>View more</button>
+
+            <button className="btn-dark">
+              View more
+              <FaArrowRight />
+            </button>
           </div>
-        </section>
+        </div>
 
         {/*Hand-lettering and design*/}
-        <section className="learn__item hand-lettering">
-          <div className="learn__description">
-            <div className="learn__style-copy">
+        <div className="learn-item hand-lettering">
+          <div className="learn-description">
+            <div className="learn-style-copy">
               <h2 className="title">Hand-Lettering & Design</h2>
-              <div className="learn__style-paragraph">
+              <div className="learn-style-paragraph">
                 <p>
                   Hand-lettering and design involves crafting custom letterforms
                   by hand, complemented by brush lettering's expressive strokes
@@ -191,64 +192,76 @@ const Home = () => {
                 tools, ideal for various design applications.
               </p>
             </div>
-            <button>View more</button>
+            <button className="btn-dark">
+              View more <FaArrowRight />
+            </button>
           </div>
 
-          <div className="learn__img-container">
-            <img className="learn__img" src={Hand} alt="" />
+          <div className="learn-img-container">
+            <img className="learn-img" src={Hand} alt="" />
           </div>
-        </section>
+        </div>
       </section>
 
       {/*******Gallery section*******/}
-      <section className="gallery px-large">
-        <div className="gallery__copy">
-          <div className="heading">
-            <h3 className="caption">Gallery</h3>
-            <h1 className="title">Our Curated Collection</h1>
+      <section className="home__gallery section-py">
+        <div className="gallery-content container">
+          <div className="gallery-copy">
+            <div className="gallery-heading">
+              <h3 className="gallery-caption caption">Gallery</h3>
+              <h1 className="gallery-title title">Our Curated Collection</h1>
+            </div>
+            <p className="body paragraph">
+              Explore our collection of calligraphic masterpieces. Browse
+              through a variety of styles, scripts, and letterforms.
+            </p>
           </div>
-          <p className="body">
-            Explore our collection of calligraphic masterpieces. Browse through
-            a variety of styles, scripts, and letterforms.
-          </p>
+
+          <div className="gallery-cards">
+            <div className="gallery-card">
+              <img src={Gcard1} alt="" />
+            </div>
+
+            <div className="gallery-card">
+              <img src={Gcard2} alt="" />
+            </div>
+
+            <div className="gallery-card">
+              <img src={Gcard3} alt="" />
+            </div>
+          </div>
+
+          <button className="btn-light">
+            View more <FaArrowRight />
+          </button>
         </div>
-
-        <div className="gallery__cards">
-          <div className="card">
-            <img src={Gcard1} alt="" />
-          </div>
-
-          <div className="card">
-            <img src={Gcard2} alt="" />
-          </div>
-
-          <div className="card">
-            <img src={Gcard3} alt="" />
-          </div>
-        </div>
-
-        <button>View more</button>
       </section>
 
       {/*******Contact section*******/}
-      <section className="contact">
-        <img src="" alt="" className="contact__img" />
-        <div className="contact__info">
-          <h1 className="contact__title title">Connect with us</h1>
+      <section className="home__contact-section">
+        <div className="contact-img-container">
+          <img src={Contactimg} alt="" className="contact-img" />
+        </div>
 
-          <div className="contact__items">
-            <div className="contact__item">
-              <HiOutlineMail />
-              <p className="contact__body">thescratchynib@gmail.com</p>
-            </div>
-            <CiLocationOn />
-            <div className="contact__item">
-              <p className="contact__body">152 lane Mumbai</p>
-            </div>
+        <div className="contact-info-wrapper container">
+          <div className="contact-info">
+            <h1 className="contact-title title">Connect with us</h1>
 
-            <div className="contact__item">
-              <HiOutlinePhone />
-              <p className="contact__body">238 458 377</p>
+            <div className="contact-items">
+              <div className="contact-item">
+                <MdOutlineEmail />
+                <p className="contact-body">152 lane Mumbai</p>
+              </div>
+
+              <div className="contact-item">
+                <IoLocationOutline />
+                <p className="contact-body">152 lane Mumbai</p>
+              </div>
+
+              <div className="contact-item">
+                <IoCallOutline />
+                <p className="contact-body">238 458 377</p>
+              </div>
             </div>
           </div>
         </div>
