@@ -1,0 +1,76 @@
+@import "../../../../styles/variablels";
+
+.gallery-sort {
+  position: relative;
+
+  .gallery-sort__trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 19.5px;
+    border-radius: 0px 100px 100px 0px;
+    color: $primary-color;
+    font-size: $text-lg;
+    flex-shrink: 0;
+    cursor: pointer;
+    border: none;
+    justify-content: center;
+
+    * {
+      flex-shrink: 0;
+    }
+
+    .icon {
+      color: $primary-color;
+      transition: all 200ms ease-out;
+    }
+  }
+
+  .gallery-sort__popup {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+
+    button {
+      border: none;
+      background-color: transparent;
+      color: $primary-color;
+      font-family: $secondary-font;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11.2px 16px;
+      font-size: $text-base;
+
+      .selected {
+        display: block;
+      }
+      .not-selected {
+        display: none;
+      }
+    }
+
+    button:first-child {
+      border-bottom: 1px solid #64636326;
+    }
+  }
+
+  .open {
+    transform-origin: top;
+    transform: scaleY(100%);
+    transition: all 200ms ease-out;
+  }
+
+  .closed {
+    transform-origin: top;
+    transition: all 200ms ease-out;
+    transform: scaleY(0);
+  }
+}

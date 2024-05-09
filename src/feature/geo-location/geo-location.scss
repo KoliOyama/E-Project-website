@@ -1,0 +1,17 @@
+@import "../../styles/variablels";
+
+.geo-location {
+  position: fixed;
+  background-color: $secondary-color;
+  color: $primary-color;
+  top: 50%;
+  left: 87%;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: $spacer-3;
+  transform: rotate(-90deg) translateY(-50%);
+  white-space: nowrap;
+  padding: $spacer-1;
+  border-radius: 12px;
+}

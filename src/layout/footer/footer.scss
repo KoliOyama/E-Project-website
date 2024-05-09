@@ -1,4 +1,5 @@
 @import "../../styles/variablels";
+@import "../../styles/breakpoints";
 
 .footer {
   padding: 106px 133px;
@@ -11,12 +12,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: $spacer-3;
   }
 
   &__logo {
     font-family: $brand-font;
     font-size: $text-8xl;
     // margin-bottom: 2rem;
+
+    @include breakpoint-down(medium) {
+      font-size: $text-4xl;
+    }
   }
 
   p {
@@ -31,6 +37,11 @@
     padding-bottom: 0.5rem;
     gap: 4rem;
     // margin-top: 2rem;
+
+    @include breakpoint-down(small) {
+      gap: 0;
+      justify-content: space-between;
+    }
 
     input {
       background-color: transparent;
@@ -62,6 +73,16 @@
     font-size: $text-lg;
   }
 
+  &__links-container {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+
+    @include breakpoint-down(small) {
+      width: 100%;
+    }
+  }
+
   &__links {
     padding-top: 45px;
     display: flex;
@@ -73,6 +94,22 @@
     li:first-child {
       font-size: $text-2xl;
       font-weight: 600;
+
+      @include breakpoint-down(medium) {
+        font-size: $text-lg;
+      }
     }
+
+    @include breakpoint-down(medium) {
+      font-size: $text-base;
+    }
+  }
+
+  @include breakpoint-down(medium) {
+    padding: $spacer-5 $spacer-3;
+  }
+  @include breakpoint-down(small) {
+    padding: $spacer-3 $spacer-2 $spacer-4;
+    flex-direction: column;
   }
 }
