@@ -17,7 +17,7 @@
         font-family: $primary-font;
         margin-bottom: 72px;
 
-        @include breakpoint-down(small) {
+        @include breakpoint-down(sm) {
           font-size: $text-4xl;
           margin-bottom: $spacer-1;
         }
@@ -34,11 +34,11 @@
         }
       }
 
-      @include breakpoint-down(medium) {
+      @include breakpoint-down(md) {
         padding: $spacer-5 25% $spacer-5 $spacer-3;
         width: 70%;
       }
-      @include breakpoint-down(small) {
+      @include breakpoint-down(sm) {
         width: 100%;
       }
     }
@@ -55,16 +55,16 @@
         object-fit: cover;
       }
 
-      @include breakpoint-down(medium) {
+      @include breakpoint-down(md) {
         right: $spacer-2;
         width: 50%;
       }
-      @include breakpoint-down(small) {
+      @include breakpoint-down(sm) {
         display: none;
       }
     }
 
-    @include breakpoint-down(small) {
+    @include breakpoint-down(sm) {
       padding: 78px 24px 78px 0;
     }
   }
@@ -77,7 +77,7 @@
     & > div {
       width: 50%;
 
-      @include breakpoint-down(small) {
+      @include breakpoint-down(sm) {
         width: 100%;
       }
     }
@@ -88,7 +88,7 @@
       color: $primary-color;
       margin-bottom: $spacer-1;
 
-      @include breakpoint-down(small) {
+      @include breakpoint-down(sm) {
         font-size: $text-4xl;
       }
     }
@@ -99,11 +99,11 @@
       color: $primary-color;
     }
 
-    @include breakpoint-down(medium) {
+    @include breakpoint-down(md) {
       padding: $spacer-3;
     }
 
-    @include breakpoint-down(small) {
+    @include breakpoint-down(sm) {
       padding: $spacer-2;
       flex-direction: column;
       gap: $spacer-1;
@@ -117,7 +117,7 @@
     & > div {
       width: 50%;
 
-      @include breakpoint-down(small) {
+      @include breakpoint-down(sm) {
         width: 100%;
       }
     }
@@ -128,7 +128,7 @@
       color: $primary-color;
       margin-bottom: $spacer-1;
 
-      @include breakpoint-down(small) {
+      @include breakpoint-down(sm) {
         font-size: $text-4xl;
       }
     }
@@ -153,16 +153,16 @@
       font-family: $secondary-font;
       margin-top: $spacer-4;
 
-      @include breakpoint-down(small) {
+      @include breakpoint-down(sm) {
         font-size: $text-base;
       }
     }
 
-    @include breakpoint-down(medium) {
+    @include breakpoint-down(md) {
       padding: $spacer-3 $spacer-3 $spacer-5;
     }
 
-    @include breakpoint-down(small) {
+    @include breakpoint-down(sm) {
       padding: $spacer-2 $spacer-2 $spacer-5;
       flex-direction: column-reverse;
       gap: $spacer-1;

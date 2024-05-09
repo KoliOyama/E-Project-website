@@ -1,4 +1,5 @@
 @import "../../../../styles/variablels";
+@import "../../../../styles/breakpoints";
 
 .skeleton-loader {
   display: grid;
@@ -35,6 +36,11 @@
   .card-lg {
     grid-row: span 8;
     grid-column: span 1;
+  }
+
+  @include breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+    gap: $spacer-1;
   }
 }
 

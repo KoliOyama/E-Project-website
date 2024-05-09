@@ -20,7 +20,7 @@
     font-size: $text-8xl;
     // margin-bottom: 2rem;
 
-    @include breakpoint-down(medium) {
+    @include breakpoint-down(md) {
       font-size: $text-4xl;
     }
   }
@@ -38,7 +38,7 @@
     gap: 4rem;
     // margin-top: 2rem;
 
-    @include breakpoint-down(small) {
+    @include breakpoint-down(sm) {
       gap: 0;
       justify-content: space-between;
     }
@@ -78,7 +78,7 @@
     justify-content: space-between;
     width: 40%;
 
-    @include breakpoint-down(small) {
+    @include breakpoint-down(sm) {
       width: 100%;
     }
   }
@@ -95,20 +95,20 @@
       font-size: $text-2xl;
       font-weight: 600;
 
-      @include breakpoint-down(medium) {
+      @include breakpoint-down(md) {
         font-size: $text-lg;
       }
     }
 
-    @include breakpoint-down(medium) {
+    @include breakpoint-down(sm) {
       font-size: $text-base;
     }
   }
 
-  @include breakpoint-down(medium) {
+  @include breakpoint-down(md) {
     padding: $spacer-5 $spacer-3;
   }
-  @include breakpoint-down(small) {
+  @include breakpoint-down(sm) {
     padding: $spacer-3 $spacer-2 $spacer-4;
     flex-direction: column;
   }

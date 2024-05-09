@@ -1,4 +1,5 @@
 @import "../../../../styles/variablels";
+@import "../../../../styles/breakpoints";
 
 .gallery-sort {
   position: relative;
@@ -16,7 +17,6 @@
     cursor: pointer;
     border: none;
     justify-content: center;
-
     * {
       flex-shrink: 0;
     }
@@ -24,6 +24,16 @@
     .icon {
       color: $primary-color;
       transition: all 200ms ease-out;
+    }
+
+    @include breakpoint-down(sm) {
+      padding: $spacer-1;
+      font-size: $text-base;
+      gap: 4px;
+
+      & > *:first-child {
+        display: none;
+      }
     }
   }
 
@@ -49,6 +59,9 @@
       padding: 11.2px 16px;
       font-size: $text-base;
 
+      @include breakpoint-down(sm) {
+        padding: 4px;
+      }
       .selected {
         display: block;
       }

@@ -9,7 +9,7 @@ const GallerySort = () => {
 
   return (
     <div className="gallery-sort">
-      <button
+      <div
         className="gallery-sort__trigger"
         onClick={() => setOpen((prev) => !prev)}
       >
@@ -20,7 +20,7 @@ const GallerySort = () => {
           className="icon"
           style={open ? { transform: "rotate(180deg)" } : undefined}
         />
-      </button>
+      </div>
       <div className={"gallery-sort__popup " + (open ? "open" : "closed")}>
         <button className="gallery-sort__select-button">
           <span>Newest</span>

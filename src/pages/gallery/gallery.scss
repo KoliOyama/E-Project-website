@@ -1,4 +1,5 @@
 @import "../../styles/variablels";
+@import "../../styles/breakpoints";
 
 .gallery {
   padding: $spacer-5 126px;
@@ -7,6 +8,10 @@
   h1 {
     font-size: $text-9xl;
     font-family: $primary-font;
+
+    @include breakpoint-down(sm) {
+      font-size: $text-4xl;
+    }
   }
 
   .gallery__search {
@@ -27,6 +32,12 @@
       background-repeat: no-repeat;
       background-position: 18px center;
       font-size: $text-lg;
+
+      @include breakpoint-down(sm) {
+        font-size: $text-base;
+        padding: $spacer-1;
+        padding-left: 52px;
+      }
     }
   }
 
@@ -35,9 +46,24 @@
     display: flex;
     gap: 28px;
     justify-content: space-between;
+
+    @include breakpoint-down(md) {
+      gap: $spacer-1;
+      overflow-x: scroll;
+      scrollbar-color: $accent-color transparent;
+      scroll-margin-top: 16px;
+      scrollbar-width: 3px;
+    }
   }
 
   .gallery__main {
     margin-top: 96px;
+  }
+
+  @include breakpoint-down(md) {
+    padding: $spacer-2;
+  }
+  @include breakpoint-down(sm) {
+    padding: $spacer-1;
   }
 }
