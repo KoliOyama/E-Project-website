@@ -1,0 +1,113 @@
+@import "../../../../styles/variablels";
+
+.details {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba($primary-color, 0.4);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 126px;
+
+  &__modal {
+    display: flex;
+    background-color: $secondary-color;
+    border-radius: 20px;
+    height: 675px;
+    overflow: hidden;
+    z-index: 30;
+
+    & > div {
+      width: 50%;
+    }
+
+    .details__img-container {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .details__text-container {
+      padding: 80px 40px;
+      color: $primary-color;
+
+      h3 {
+        font-size: $text-2xl;
+        font-family: $primary-font;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: $text-base;
+        font-family: $secondary-font;
+      }
+
+      .details__comments-container {
+        margin-top: 90px;
+
+        .details__comments-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .icon {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  &__comments {
+    margin-block: 36px;
+    height: 120px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__foot {
+    border-top: 3px solid #32151780;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-block: 20px;
+  }
+
+  &__likes {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    align-self: flex-end;
+
+    .circle {
+      width: 30px;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #d2cab3;
+      border-radius: 50%;
+    }
+  }
+  &__comments-form {
+    width: 100%;
+    display: block;
+
+    input {
+      background-color: transparent;
+      width: 100%;
+      color: $primary-color;
+      padding: 16px;
+      border-radius: 100px;
+      border: 3px solid $primary-color;
+    }
+  }
+}

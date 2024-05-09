@@ -1,0 +1,43 @@
+@import "../../styles/variablels";
+
+.gallery {
+  padding: $spacer-5 126px;
+  color: $primary-color;
+
+  h1 {
+    font-size: $text-9xl;
+    font-family: $primary-font;
+  }
+
+  .gallery__search {
+    margin-top: 50px;
+    width: 100%;
+
+    display: flex;
+    gap: 5px;
+
+    input {
+      border-radius: 100px 0px 0px 100px;
+      border: none;
+      width: 100%;
+      padding: 19.5px;
+      padding-left: 52px;
+      background-color: #fff;
+      font-family: $secondary-font;
+      background-repeat: no-repeat;
+      background-position: 18px center;
+      font-size: $text-lg;
+    }
+  }
+
+  .gallery__filters {
+    margin-top: 40px;
+    display: flex;
+    gap: 28px;
+    justify-content: space-between;
+  }
+
+  .gallery__main {
+    margin-top: 96px;
+  }
+}

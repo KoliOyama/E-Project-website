@@ -1,0 +1,51 @@
+@import "../../../../styles/variablels";
+
+.gallery-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &::before {
+    content: "View details";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 300ms ease-out;
+    cursor: pointer;
+    color: $secondary-color;
+    font-size: $text-xl;
+    text-align: center;
+    background-color: rgba($primary-color, 0.5);
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.card-sm {
+  grid-row: span 8;
+  grid-column: span 1;
+}
+.card-md {
+  grid-row: span 10;
+  grid-column: span 1;
+}
+.card-lg {
+  grid-row: span 8;
+  grid-column: span 1;
+}

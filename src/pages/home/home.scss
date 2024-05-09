@@ -174,6 +174,37 @@
       margin-top: $spacer-4;
     }
   }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: $spacer-5;
+
+    &__copy {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    &__cards {
+      display: flex;
+      flex-direction: row;
+      gap: 4rem;
+
+      .card {
+        width: 32.1875rem;
+        height: 32.625rem;
+        overflow: hidden;
+        border-radius: 20px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
 
 .learn {
@@ -218,37 +249,6 @@
     width: 17.6875rem;
     height: 11.875rem;
     object-fit: cover;
-  }
-}
-
-.gallery {
-  display: flex;
-  flex-direction: column;
-  gap: $spacer-5;
-
-  &__copy {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
-
-  &__cards {
-    display: flex;
-    flex-direction: row;
-    gap: 4rem;
-
-    .card {
-      width: 32.1875rem;
-      height: 32.625rem;
-      overflow: hidden;
-      border-radius: 20px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
   }
 }
 
