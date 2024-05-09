@@ -53,6 +53,8 @@ const Gallery = () => {
     queryKey: ["calligraphy"],
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+  const [results, setResults] = useState(null);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeCalligraphy, setActiveCalligraphy] = useState(null);
@@ -65,6 +67,10 @@ const Gallery = () => {
     setIsModalOpen(false);
   };
 
+  const handleSearchChange = (e) => {
+    setSearchValue(e.target.value);
+  };
+
   useEffect(() => {
     const id = searchParams.get("id");
     if (id && isSuccess) {
@@ -75,6 +81,18 @@ const Gallery = () => {
       closeModal();
     }
   }, [searchParams, isSuccess, data]);
+
+  useEffect(() => {
+    if (searchValue) {
+      const results = data?.filter(
+        (doc) =>
+          doc.title.toLowerCase().indexOf(searchValue.toLowerCase()) != -1
+      );
+      setResults(results);
+    } else {
+      setResults(null);
+    }
+  }, [searchValue]);
   return (
     <main className="gallery">
       <h1>Gallery</h1>
@@ -82,6 +100,8 @@ const Gallery = () => {
         <input
           type="search"
           placeholder="Search"
+          value={searchValue}
+          onChange={handleSearchChange}
           style={{ backgroundImage: `url(${searchIcon})` }}
         />
         <GallerySort />
@@ -92,7 +112,7 @@ const Gallery = () => {
         ))}
       </div>
       <section className="gallery__main">
-        {isSuccess && <GalleryGrid data={data} />}
+        {isSuccess && <GalleryGrid data={results || data} />}
         {isPending && <SkeletonLoader />}
       </section>
       {isModalOpen && activeCalligraphy && (

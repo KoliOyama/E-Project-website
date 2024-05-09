@@ -33,6 +33,10 @@
       background-position: 18px center;
       font-size: $text-lg;
 
+      &:focus {
+        outline: 1px solid $accent-color;
+      }
+
       @include breakpoint-down(sm) {
         font-size: $text-base;
         padding: $spacer-1;

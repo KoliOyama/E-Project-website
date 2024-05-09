@@ -7,6 +7,13 @@
   grid-auto-rows: 32px;
   gap: 24px;
 
+  &__no-match {
+    display: block;
+    font-size: $text-xl;
+    text-align: center;
+    grid-column: 1 / -1;
+  }
+
   @include breakpoint-down(md) {
     grid-template-columns: repeat(2, 1fr);
   }
