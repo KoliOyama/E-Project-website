@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playball&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import './variablels';
+@import './breakpoints';
 
 *,
 *::before,
@@ -58,18 +59,52 @@ body{
 }
 
 //helper classes
-.max-w-75 {
-    max-width: 75rem;
+.container{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: 4vw;
+  
+
+
+  @include breakpoint-down(xxs){
+    max-width:100%;
+  }
+
+
+  @include breakpoint-down(xs){
+    max-width: 475px;
+  }
+
+
+  @include breakpoint-down(sm){
+    max-width: 640px;
+  }
+
+  @include breakpoint-down(md){
+    max-width: 980px;
+  }
+
+
+  @include breakpoint-down(lg){
+    max-width: 1024px;
+  }
+
+  // xxl desktop
+  @include breakpoint-down(xl){
+    max-width: 1280px;
+  }
 }
 
-.py-8 {
-    padding-block-start: 5rem;
-    padding-block-end: 5rem;
+.section-py {
+  padding-block: $spacer-5;
+
+  @include breakpoint-down(sm){
+    padding-block: 2.75rem;
+  }
 }
 
-.px-large{
-    padding-inline: 7.75rem;
-}
+
 
 .paragraph{
     line-height: $spacer-2;
@@ -92,4 +127,51 @@ body{
     font-family: $primary-font;
     font-weight: $fw-medium;
 
+    @include breakpoint-down(lg){
+      font-size: $text-4xl;
+    }
+
+    @include breakpoint-down(md){
+      font-size: $text-3xl;
+    }
+
 }
+
+//button
+.btn-light{
+  padding: 0.625em 1em;
+  border-radius: 50vw;
+  border: 3px solid $secondary-color;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: transparent;
+  font-size: $text-lg;
+  font-weight: $fw-medium;
+  color: $secondary-color;
+  font-family: $secondary-font;
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+
+.btn-dark{
+  padding: 0.625em 1em;
+  border-radius: 50vw;
+  border: 3px solid $primary-color;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: transparent;
+  font-size: $text-lg;
+  font-weight: $fw-medium;
+  color: $primary-color;
+  font-family: $secondary-font;
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+
+.btn-light:hover, .btn-dark:hover{
+  gap: 20px;
+
+}
+

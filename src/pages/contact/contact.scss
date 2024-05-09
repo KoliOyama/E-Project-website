@@ -1,0 +1,137 @@
+@import "../../styles/variablels";
+@import "../../styles/globals";
+@import "../../styles/breakpoints";
+
+.contact {
+  display: flex;
+
+  h1 {
+    font-family: $primary-font;
+    font-weight: $fw-medium;
+    font-size: 4rem;
+    text-wrap: wrap;
+    padding-left: 40px;
+  }
+
+  h2 {
+    font-family: $primary-font;
+    font-weight: $fw-medium;
+    font-size: 1.5rem;
+    text-wrap: wrap;
+    padding-left: 40px;
+  }
+
+
+
+  .contact-paragraph {
+    font-size: 1rem;
+    text-wrap: wrap;
+    padding-left: 40px;
+    line-height: 1.5rem;
+  }
+
+  .flex-wrap{
+    margin-top: 35px;
+  }
+
+  .contact-paragraph1 {
+    // font-size: 1rem;
+    // text-wrap: wrap;
+    // padding-left: 40px;
+  }
+  .contact-paragraph2 {
+    font-size: 0.9rem;
+    text-wrap: wrap;
+    padding-left: 40px;
+    line-height: 1.5rem;
+  }
+
+  &__list {
+
+    input {
+      border: none;
+      color: $secondary-color;
+
+      &::placeholder {
+        color: #646363;
+      }
+
+      &:focus {
+        outline: white;
+      }
+    }
+  }
+
+  .contactsubmit {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactsubmit input {
+    padding-block: 18px;
+    scroll-margin-block-end: 50px;
+    color: black;
+  }
+
+  .contact-flex-wrapper {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #submitbtn {
+    height: 40px;
+    width: 128px;
+    padding: 10px 16px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: rgba(50, 21, 23, 1) outset 2px;
+    margin-left: 5px;
+    margin-top: 15px;
+    font-family: $secondary-font;
+    cursor: pointer;
+  }
+
+  #contact_input{
+    width: 500px;
+    height: 69px;
+    display: flex;
+    border-bottom: 1px solid  rgba(50, 21, 23, 1);
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    gap: 4rem;
+    background-color: transparent;
+  }
+
+
+  @media only screen and (max-width: 375.5px) {
+    /* Adjust styles for extra small devices */
+    .footer1 {
+      display: block;
+      width: 380px;
+    }
+  
+    .first_foot {
+      display: block;
+    }
+  
+    .footer-sectiona {
+      margin-left: 1px;
+      margin-block-start: 1rem;
+      /* Example: Adjust styling for footer sections */
+    }
+  
+    .cta {
+      margin-left: 2%;
+    }
+  
+    .footer-sectionb {
+      margin-left: 0px;
+      padding-inline: var(--padding-sm);
+    }
+  
+    /* Add more specific styles as needed for smaller screens */
+  }
+}

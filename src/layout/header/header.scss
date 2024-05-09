@@ -1,123 +1,126 @@
 @import '../../styles/variablels';
+@import "../../styles/globals";
 @import '../../styles/breakpoints';
 
 
 .header{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    padding: 2rem 7.75rem;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    padding-block: $spacer-3;
     transition: 0.3s ease all;
-
-    @include breakpoint-down(medium1){
-        padding: 2rem 2rem;
-    }
-
     font-family: $secondary-font;
     font-weight: 500;
 
+    // @include breakpoint-down(lg){
+    //     padding: 2rem 2rem;
+    // }
+
     &__content{
+        overflow: hidden;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
+        z-index: 1;
+        height: 100%;
         position: relative;
+        padding-block: .55rem;
 
         &.isMenu{
             transform: translate(100%);
         }
-    }
 
 
-    &__menu-toggle{
-        display: none;
-
-        //show menu toggle
-        @include breakpoint-down(medium){
-            display: block;
+        .header-toggle{
+            display: none; 
             cursor: pointer;
+    
+            //show menu toggle
+            @include breakpoint-down(lg){
+                display: block;
+                display: flex;
+                align-items: center;
+                transition: 0.3s ease all;
+                position: relative;
+            }
+        }
+    
+        .nav-container{
             display: flex;
-            align-items: center;
-            transition: 0.3s ease all;
-            position: relative;
-        }
-    }
+            transform: none;
+            width: auto;
+            height: 100%;
+            position: static;
+    
+    
+            @include breakpoint-down(lg){
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: 100%;
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background-color: $white;
+                transform: translate(0);
+                transition: 0.3s ease transform;
+    
+            }
 
-    &__nav-container{
-        display: flex;
-        transform: none;
-        background: transparent;
-        width: auto;
-        height: 100%;
-        position: static;
-
-
-        @include breakpoint-down(medium){
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            right: 100%;
-            width: 100%;
-            height: 100vh;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            background-color: $accent-color;
-            transform: translate(0);
-            transition: 0.3s ease transform;
-
-        }
-    }
-
-
-    &__nav-links{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 0;
-        margin-right: calc(0.5rem + #{$spacer-2});
-
-
-
-        @include breakpoint-down(medium){
-            flex-direction: column;
-            margin-bottom: $spacer-3;
-            
-        }
-
+            .nav-links{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+                
+                // margin-right: calc(0.5rem + #{$spacer-2});
         
-    .nav-link{
-        color: $primary-color;
-        &:hover{
-            color: $accent-color;
+        
+        
+                @include breakpoint-down(xs){
+                    flex-direction: column;
+                    
+                }
+        
+                
+                .nav-link{
+                    color: $primary-color;
+                    &:hover{
+                        color: $accent-color;
+                    }
+        
+                    @include breakpoint-down(md){
+                        transition: 0.3s ease all;
+                    }
+        
+                }
+        
+            }
         }
+    
+    
+    
+    
+    
+        .logo-container{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
 
-        @include breakpoint-down(medium){
-            transition: 0.3s ease all;
+            .header-logo{
+                font-family: $brand-font;
+                font-size: $text-3xl;
+
+                @include breakpoint-down(sm){
+                    font-size: $text-2xl;
+                }
+            }
         }
-
-    }
-
-    }
-
-
-
-
-    &__logo-container{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    &__visitor-count{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: .5rem;
     }
 }
