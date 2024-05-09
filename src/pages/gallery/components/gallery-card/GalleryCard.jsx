@@ -2,15 +2,15 @@ import "./gallery-card.scss";
 import calligraphyImg from "../../../../assets/calligraphy-img.jpg";
 import { useNavigate } from "react-router-dom";
 
-const GalleryCard = ({ size }) => {
+const GalleryCard = ({ size, calligraphy }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("?id=123");
+    navigate(`?id=${calligraphy.id}`);
   };
   return (
     <div className={"gallery-card " + size} onClick={handleClick}>
-      <img src={calligraphyImg} />
+      <img src={calligraphy.image} />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { useMutation } from "@tanstack/react-query";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { useEffect } from "react";
 import { db, storage } from "../firebase/firebase";
-import { addDoc, collection, getDoc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 
 export const useAdminUpload = () => {
   const { isPending, isSuccess, isError, data, mutate, error } = useMutation({

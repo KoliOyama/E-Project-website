@@ -4,8 +4,9 @@ import { PiHeartStraight } from "react-icons/pi";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import CommentCard from "../comment-card/CommentCard";
 import { useNavigate } from "react-router-dom";
+import AddComment from "../add-comment/AddComment";
 
-const DetailsModal = ({ close }) => {
+const DetailsModal = ({ calligraphy }) => {
   const navigate = useNavigate();
   const handleClick = (e) => {
     if (e.target.id == "outside-box") {
@@ -16,16 +17,12 @@ const DetailsModal = ({ close }) => {
     <div className="details" id="outside-box" onClick={handleClick}>
       <div className="details__modal">
         <div className="details__img-container">
-          <img src={calligraphyImg} />
+          <img src={calligraphy.image} />
         </div>
         <div className="details__text-container">
           <div>
-            <h3>Chinese Calligraphy</h3>
-            <p>
-              Clerical Script: Clerical script evolved from Seal Script and is
-              more streamlined. It was commonly used for official documents
-              during the Han dynasty
-            </p>
+            <h3>{calligraphy.title}</h3>
+            <p>{calligraphy.description}</p>
           </div>
           <div className="details__comments-container">
             <div className="details__comments-header">
@@ -33,10 +30,9 @@ const DetailsModal = ({ close }) => {
               <MdOutlineKeyboardArrowDown size={20} className="icon" />
             </div>
             <div className="details__comments">
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
-              <CommentCard />
+              {calligraphy.reviews.map((review) => (
+                <CommentCard review={review} />
+              ))}
             </div>
           </div>
           <div className="details__foot">
@@ -47,9 +43,7 @@ const DetailsModal = ({ close }) => {
               </div>
             </div>
 
-            <form className="details__comments-form">
-              <input placeholder="Add a comment" />
-            </form>
+            <AddComment calligraphy={calligraphy} />
           </div>
         </div>
       </div>

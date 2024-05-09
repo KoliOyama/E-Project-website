@@ -1,0 +1,48 @@
+@import "../../../../styles/variablels";
+
+.skeleton-loader {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 32px;
+  gap: 24px;
+
+  .skeleton-card {
+    border-radius: 20px;
+    background-color: $accent-color;
+    position: relative;
+  }
+
+  &__shimmer {
+    position: absolute;
+    height: 30px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba($secondary-color, 0.4);
+    backdrop-filter: blur(8px);
+    right: 0;
+    animation: shimmer 1.5s linear infinite alternate;
+  }
+
+  .card-sm {
+    grid-row: span 8;
+    grid-column: span 1;
+  }
+  .card-md {
+    grid-row: span 10;
+    grid-column: span 1;
+  }
+  .card-lg {
+    grid-row: span 8;
+    grid-column: span 1;
+  }
+}
+
+@keyframes shimmer {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(150px);
+  }
+}

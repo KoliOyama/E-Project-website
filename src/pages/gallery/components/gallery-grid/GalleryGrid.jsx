@@ -3,17 +3,15 @@ import GalleryCard from "../gallery-card/GalleryCard";
 
 const CARD_SIZES = ["card-sm", "card-md", "card-lg"];
 
-const GalleryGrid = () => {
+const GalleryGrid = ({ data }) => {
   return (
     <div className="gallery-grid">
-      <GalleryCard size={CARD_SIZES[0]} />
-      <GalleryCard size={CARD_SIZES[1]} />
-      <GalleryCard size={CARD_SIZES[0]} />
-      <GalleryCard size={CARD_SIZES[1]} />
-      <GalleryCard size={CARD_SIZES[0]} />
-      <GalleryCard size={CARD_SIZES[1]} />
-      <GalleryCard size={CARD_SIZES[0]} />
-      <GalleryCard size={CARD_SIZES[1]} />
+      {data.map((doc, index) => (
+        <GalleryCard
+          size={index % 2 == 0 ? CARD_SIZES[0] : CARD_SIZES[1]}
+          calligraphy={doc}
+        />
+      ))}
     </div>
   );
 };
