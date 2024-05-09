@@ -1,0 +1,53 @@
+@import "../../styles/variablels";
+
+.admin {
+  padding: 96px 162px;
+
+  h1 {
+    font-size: $text-4xl;
+    font-family: $primary-font;
+    margin-bottom: 40px;
+  }
+
+  form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    input,
+    textarea {
+      font-family: $secondary-font;
+      font-size: $text-xl;
+      background-color: transparent;
+      padding: 16px;
+      border: 1px solid $primary-color;
+      border-radius: 12px;
+    }
+
+    text-area {
+      height: 100px;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
+    padding: 16px;
+    font-family: $secondary-font;
+    border-radius: 12px;
+    background-color: $primary-color;
+    border: none;
+    color: $secondary-color;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 60%;
+    }
+  }
+}

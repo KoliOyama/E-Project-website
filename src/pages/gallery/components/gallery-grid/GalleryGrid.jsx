@@ -1,6 +1,4 @@
 import "./gallery-grid.scss";
-import calligraphyImg from "../../../../assets/calligraphy-img.jpg";
-import calligraphyImg2 from "../../../../assets/western calligraphy1.jpg";
 import GalleryCard from "../gallery-card/GalleryCard";
 
 const CARD_SIZES = ["card-sm", "card-md", "card-lg"];
